@@ -20,3 +20,6 @@ export { default as LRectangle } from './LRectangle.vue';
 export { default as LTileLayer } from './LTileLayer.vue';
 // export { default as LTooltip } from './LTooltip.vue';
 // export { default as LWmsTileLayer } from './LWmsTileLayer.vue';
+
+export * as Utilities from './utils';
+export * as Props from './props';

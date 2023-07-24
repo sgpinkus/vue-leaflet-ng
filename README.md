@@ -1,4 +1,4 @@
-# VUE LEAFLET MINI
+# VUE LEAFLET NG
 Port of @vue-leaflet/vue-leaflet to try and stop it or Vue or both blowing up. Only ported components I needed:
 
 ```
@@ -11,3 +11,5 @@ src/LPolyline.vue
 src/LRectangle.vue
 src/LTileLayer.vue
 ```
+
+Maybe WIP. Implementing LPopup or container components where parent child interaction is required is currently too flaky and a wont-fix.
