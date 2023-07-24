@@ -5,3 +5,5 @@ export { default as LPolygon } from './LPolygon.vue';
 export { default as LPolyline } from './LPolyline.vue';
 export { default as LRectangle } from './LRectangle.vue';
 export { default as LTileLayer } from './LTileLayer.vue';
+export * as Utilities from './utils';
+export * as Props from './props';
