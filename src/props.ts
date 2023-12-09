@@ -325,11 +325,6 @@ export const markerProps = {
   draggable: {
     type: Boolean,
     default: undefined,
-    setter(leafletObject: L.Marker, draggable: boolean) {
-      if (leafletObject.dragging) {
-        draggable ? leafletObject.dragging.enable() : leafletObject.dragging.disable();
-      }
-    }
   },
   icon: {
     type: [Object] as PropType<L.Icon | L.Icon<L.BaseIconOptions>>,
@@ -353,6 +348,13 @@ export const markerPropsSetters = {
       if (!oldLatLng || !oldLatLng.equals(latLng)) {
         leafletObject.setLatLng(latLng);
       }
+    },
+  },
+  draggable: {
+    setter(leafletObject: L.Marker, draggable: boolean) {
+      if (leafletObject.dragging) {
+        draggable ? leafletObject.dragging.enable() : leafletObject.dragging.disable();
+      }
     }
   },
 } as const;
@@ -365,17 +367,11 @@ export const polylineProps = {
   noClip: {
     type: Boolean,
     default: undefined,
-    setter(leafletObject: L.Polygon, noClip: L.PolylineOptions['noClip']) {
-      leafletObject.setStyle({ noClip } as any);
-    },
   },
   latLngs: {
     type: Array as PropType<L.LatLngExpression[]>,
     required: true,
     custom: true,
-    setter(leafletObject: L.Polyline, latLngs: L.LatLngExpression[]) {
-      leafletObject.setLatLngs(latLngs);
-    },
   },
 } as const;
 
@@ -449,4 +445,28 @@ export const rectanglePropSetters = {
   ...polylinePropSetters,
 } as const;
 
+export const circleMarkerProps = {
+  ...pathProps,
+  radius: {
+    type: Number as PropType<number>,
+  },
+  latLng: {
+    type: [Object, Array] as PropType<L.LatLngExpression>,
+    required: true,
+    custom: true,
+  },
+} as const;
+
+export const circleMarkerPropSetters = {
+  ...pathPropSetters,
+  latLng: {
+    setter(leafletObject: L.CircleMarker, latLng: L.LatLng) {
+      if(!latLng) return;
+      const oldLatLng = leafletObject.getLatLng();
+      if (!oldLatLng || !oldLatLng.equals(latLng)) {
+        leafletObject.setLatLng(latLng);
+      }
+    },
+  },
+};
 

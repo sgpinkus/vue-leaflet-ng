@@ -369,7 +369,6 @@ export declare const markerProps: {
     readonly draggable: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
-        readonly setter: (leafletObject: L.Marker, draggable: boolean) => void;
     };
     readonly icon: {
         readonly type: PropType<L.Icon<L.IconOptions> | L.Icon<L.BaseIconOptions>>;
@@ -402,6 +401,9 @@ export declare const markerPropsSetters: {
     readonly latLng: {
         readonly setter: (leafletObject: L.Marker, latLng: L.LatLng) => void;
     };
+    readonly draggable: {
+        readonly setter: (leafletObject: L.Marker, draggable: boolean) => void;
+    };
     readonly popupText: {
         readonly setter: (leafletObject: L.Layer, popupText: string | number | (() => string | number)) => void;
         readonly setterOptions: {
@@ -416,13 +418,11 @@ export declare const polylineProps: {
     readonly noClip: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
-        readonly setter: (leafletObject: L.Polygon, noClip: L.PolylineOptions['noClip']) => void;
     };
     readonly latLngs: {
         readonly type: PropType<L.LatLngExpression[]>;
         readonly required: true;
         readonly custom: true;
-        readonly setter: (leafletObject: L.Polyline, latLngs: L.LatLngExpression[]) => void;
     };
     readonly stroke: {
         readonly type: BooleanConstructor;
@@ -549,13 +549,11 @@ export declare const polygonProps: {
     readonly noClip: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
-        readonly setter: (leafletObject: L.Polygon, noClip: L.PolylineOptions['noClip']) => void;
     };
     readonly latLngs: {
         readonly type: PropType<L.LatLngExpression[]>;
         readonly required: true;
         readonly custom: true;
-        readonly setter: (leafletObject: L.Polyline, latLngs: L.LatLngExpression[]) => void;
     };
     readonly stroke: {
         readonly type: BooleanConstructor;
@@ -706,7 +704,6 @@ export declare const rectangleProps: {
         readonly required: false;
         readonly type: PropType<L.LatLngExpression[]>;
         readonly custom: true;
-        readonly setter: (leafletObject: L.Polyline, latLngs: L.LatLngExpression[]) => void;
     };
     readonly bounds: {
         readonly type: PropType<L.LatLngBoundsExpression>;
@@ -718,7 +715,6 @@ export declare const rectangleProps: {
     readonly noClip: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
-        readonly setter: (leafletObject: L.Polygon, noClip: L.PolylineOptions['noClip']) => void;
     };
     readonly stroke: {
         readonly type: BooleanConstructor;
@@ -832,6 +828,130 @@ export declare const rectanglePropSetters: {
         readonly setter: (leafletObject: L.Path, className: string) => void;
     };
     readonly popupText: {
+        readonly setter: (leafletObject: L.Layer, popupText: string | number | (() => string | number)) => void;
+        readonly setterOptions: {
+            readonly immediate: true;
+        };
+    };
+};
+export declare const circleMarkerProps: {
+    readonly radius: {
+        readonly type: PropType<number>;
+    };
+    readonly latLng: {
+        readonly type: PropType<L.LatLngExpression>;
+        readonly required: true;
+        readonly custom: true;
+    };
+    readonly stroke: {
+        readonly type: BooleanConstructor;
+        readonly default: undefined;
+    };
+    readonly color: {
+        readonly type: StringConstructor;
+    };
+    readonly weight: {
+        readonly type: NumberConstructor;
+    };
+    readonly opacity: {
+        readonly type: NumberConstructor;
+    };
+    readonly lineCap: {
+        readonly type: PropType<L.LineCapShape | undefined>;
+    };
+    readonly lineJoin: {
+        readonly type: PropType<L.LineJoinShape | undefined>;
+    };
+    readonly dashArray: {
+        readonly type: PropType<string | number[] | undefined>;
+    };
+    readonly dashOffset: {
+        readonly type: StringConstructor;
+    };
+    readonly fill: {
+        readonly type: BooleanConstructor;
+        readonly default: undefined;
+    };
+    readonly fillColor: {
+        readonly type: StringConstructor;
+    };
+    readonly fillOpacity: {
+        readonly type: NumberConstructor;
+    };
+    readonly fillRule: {
+        readonly type: PropType<L.FillRule | undefined>;
+    };
+    readonly className: {
+        readonly type: StringConstructor;
+    };
+    readonly interactive: {
+        readonly type: BooleanConstructor;
+        readonly default: undefined;
+    };
+    readonly bubblingMouseEvents: {
+        readonly type: BooleanConstructor;
+        readonly default: undefined;
+    };
+    readonly options: {
+        readonly type: ObjectConstructor;
+        readonly default: () => {};
+        readonly custom: true;
+    };
+    readonly pane: {
+        readonly type: StringConstructor;
+    };
+    readonly attribution: {
+        readonly type: StringConstructor;
+    };
+    readonly popupText: {
+        readonly type: PropType<string | number | (() => string | number)>;
+        readonly custom: true;
+    };
+};
+export declare const circleMarkerPropSetters: {
+    latLng: {
+        setter(leafletObject: L.CircleMarker, latLng: L.LatLng): void;
+    };
+    stroke: {
+        readonly setter: (leafletObject: L.Path, stroke: PathOptions['stroke']) => void;
+    };
+    color: {
+        readonly setter: (leafletObject: L.Path, color: PathOptions['color']) => void;
+    };
+    weight: {
+        readonly setter: (leafletObject: L.Path, weight: PathOptions['weight']) => void;
+    };
+    opacity: {
+        readonly setter: (leafletObject: L.Path, opacity: PathOptions['opacity']) => void;
+    };
+    lineCap: {
+        readonly setter: (leafletObject: L.Path, lineCap: PathOptions['lineCap']) => void;
+    };
+    lineJoin: {
+        readonly setter: (leafletObject: L.Path, lineJoin: PathOptions['lineJoin']) => void;
+    };
+    dashArray: {
+        readonly setter: (leafletObject: L.Path, dashArray: PathOptions['dashArray']) => void;
+    };
+    dashOffset: {
+        readonly setter: (leafletObject: L.Path, dashOffset: string) => void;
+    };
+    fill: {
+        readonly setter: (leafletObject: L.Path, fill: boolean) => void;
+    };
+    fillColor: {
+        readonly setter: (leafletObject: L.Path, fillColor: string) => void;
+    };
+    fillOpacity: {
+        readonly setter: (leafletObject: L.Path, fillOpacity: number) => void;
+    };
+    fillRule: {
+        readonly setter: (leafletObject: L.Path, fillRule: PathOptions['fillRule']) => void;
+    };
+    className: {
+        readonly setter: (leafletObject: L.Path, className: string) => void;
+    };
+    popupText: {
         readonly setter: (leafletObject: L.Layer, popupText: string | number | (() => string | number)) => void;
         readonly setterOptions: {
             readonly immediate: true;

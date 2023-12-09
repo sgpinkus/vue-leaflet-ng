@@ -6,13 +6,11 @@ declare const _default: import("vue").DefineComponent<{
     readonly noClip: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
-        readonly setter: (leafletObject: L.Polygon<any>, noClip: boolean | undefined) => void;
     };
     readonly latLngs: {
         readonly type: import("vue").PropType<L.LatLngExpression[]>;
         readonly required: true;
         readonly custom: true;
-        readonly setter: (leafletObject: L.Polyline<import("geojson").LineString | import("geojson").MultiLineString, any>, latLngs: L.LatLngExpression[]) => void;
     };
     readonly stroke: {
         readonly type: BooleanConstructor;
@@ -87,13 +85,11 @@ declare const _default: import("vue").DefineComponent<{
     readonly noClip: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
-        readonly setter: (leafletObject: L.Polygon<any>, noClip: boolean | undefined) => void;
     };
     readonly latLngs: {
         readonly type: import("vue").PropType<L.LatLngExpression[]>;
         readonly required: true;
         readonly custom: true;
-        readonly setter: (leafletObject: L.Polyline<import("geojson").LineString | import("geojson").MultiLineString, any>, latLngs: L.LatLngExpression[]) => void;
     };
     readonly stroke: {
         readonly type: BooleanConstructor;
@@ -163,8 +159,8 @@ declare const _default: import("vue").DefineComponent<{
     readonly stroke: boolean;
     readonly noClip: boolean;
     readonly fill: boolean;
-    readonly options: Record<string, any>;
     readonly interactive: boolean;
     readonly bubblingMouseEvents: boolean;
+    readonly options: Record<string, any>;
 }, {}>;
 export default _default;

@@ -1,5 +1,5 @@
 # VUE LEAFLET NG
-Port of @vue-leaflet/vue-leaflet to try and stop it or Vue or both blowing up. Only ported components I needed:
+Port of [@vue-leaflet/vue-leaflet](https://www.npmjs.com/package/@vue-leaflet/vue-leaflet) to *try* and stop it or Vue or both blowing up (seems to work). Only ported components I needed:
 
 ```
 $ ls src/*.vue -1
@@ -12,4 +12,4 @@ src/LRectangle.vue
 src/LTileLayer.vue
 ```
 
-Maybe WIP. Implementing LPopup or container components where parent child interaction is required is currently too flaky and a wont-fix.
+Implementing LPopup or any container components where parent/child interaction is required turns out to be hard to do AFAICT. Currently it's too flaky and a wont-fix. As a work around you can set `popup-text` prop of any layer.

@@ -1,20 +1,12 @@
 import L from 'leaflet';
 declare const _default: import("vue").DefineComponent<{
-    readonly latLngs: {
-        readonly required: false;
-        readonly type: import("vue").PropType<L.LatLngExpression[]>;
-        readonly custom: true;
-    };
-    readonly bounds: {
-        readonly type: import("vue").PropType<L.LatLngBoundsExpression>;
-        readonly required: true;
-    };
-    readonly smoothFactor: {
+    readonly radius: {
         readonly type: import("vue").PropType<number>;
     };
-    readonly noClip: {
-        readonly type: BooleanConstructor;
-        readonly default: undefined;
+    readonly latLng: {
+        readonly type: import("vue").PropType<L.LatLngExpression>;
+        readonly required: true;
+        readonly custom: true;
     };
     readonly stroke: {
         readonly type: BooleanConstructor;
@@ -83,21 +75,13 @@ declare const _default: import("vue").DefineComponent<{
 }, {
     mapRef: import("vue").Ref<unknown>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    readonly latLngs: {
-        readonly required: false;
-        readonly type: import("vue").PropType<L.LatLngExpression[]>;
-        readonly custom: true;
-    };
-    readonly bounds: {
-        readonly type: import("vue").PropType<L.LatLngBoundsExpression>;
-        readonly required: true;
-    };
-    readonly smoothFactor: {
+    readonly radius: {
         readonly type: import("vue").PropType<number>;
     };
-    readonly noClip: {
-        readonly type: BooleanConstructor;
-        readonly default: undefined;
+    readonly latLng: {
+        readonly type: import("vue").PropType<L.LatLngExpression>;
+        readonly required: true;
+        readonly custom: true;
     };
     readonly stroke: {
         readonly type: BooleanConstructor;
@@ -165,7 +149,6 @@ declare const _default: import("vue").DefineComponent<{
     };
 }>>, {
     readonly stroke: boolean;
-    readonly noClip: boolean;
     readonly fill: boolean;
     readonly interactive: boolean;
     readonly bubblingMouseEvents: boolean;

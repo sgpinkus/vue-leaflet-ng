@@ -3,7 +3,6 @@ declare const _default: import("vue").DefineComponent<{
     readonly draggable: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
-        readonly setter: (leafletObject: L.Marker<any>, draggable: boolean) => void;
     };
     readonly icon: {
         readonly type: import("vue").PropType<L.Icon<L.IconOptions> | L.Icon<L.BaseIconOptions>>;
@@ -37,7 +36,6 @@ declare const _default: import("vue").DefineComponent<{
     readonly draggable: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
-        readonly setter: (leafletObject: L.Marker<any>, draggable: boolean) => void;
     };
     readonly icon: {
         readonly type: import("vue").PropType<L.Icon<L.IconOptions> | L.Icon<L.BaseIconOptions>>;

@@ -1,3 +1,5 @@
+export { default as LCircle } from './LCircle.vue';
+export { default as LCircleMarker } from './LCircleMarker.vue';
 export { default as LControl } from './LControl.vue';
 export { default as LMap } from './LMap.vue';
 export { default as LMarker } from './LMarker.vue';
