@@ -3,6 +3,8 @@ Port of [@vue-leaflet/vue-leaflet](https://www.npmjs.com/package/@vue-leaflet/vu
 
 ```
 $ ls src/*.vue -1
+src/LCircleMarker.vue
+src/LCircle.vue
 src/LControl.vue
 src/LMap.vue
 src/LMarker.vue
@@ -12,4 +14,4 @@ src/LRectangle.vue
 src/LTileLayer.vue
 ```
 
-Implementing LPopup or any container components where parent/child interaction is required turns out to be hard to do AFAICT. Currently it's too flaky and a wont-fix. As a work around you can set `popup-text` prop of any layer.
+Implementing LPopup or any container components where parent/child interaction is required turns out to be hard to do AFAICT. Currently it's too flaky and a wont-fix. As a work around you can set `popup-text` prop of any Layer object.
