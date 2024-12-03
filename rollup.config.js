@@ -31,5 +31,5 @@ export default {
       css: false,
     }),
   ],
-  external: ["vue", "leaflet/dist/leaflet-src.esm", "leaflet"],
+  external: ["vue"],
 };
