@@ -1,5 +1,5 @@
 # VUE LEAFLET NG
-Port of [@vue-leaflet/vue-leaflet](https://www.npmjs.com/package/@vue-leaflet/vue-leaflet) to *try* and stop it or Vue or both blowing up (seems to work). Only ported components I needed:
+Port of [@vue-leaflet/vue-leaflet](https://www.npmjs.com/package/@vue-leaflet/vue-leaflet) to stop it or Vue or both blowing up (seems to work). Only ported components I needed:
 
 ```
 $ ls src/*.vue -1

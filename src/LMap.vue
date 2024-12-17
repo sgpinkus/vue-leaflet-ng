@@ -33,7 +33,6 @@ export default defineComponent({
     });
 
     onUnmounted(() => {
-      console.warn('MAP UNMOUNTED');
       map?.off();
       map?.remove();
     });
