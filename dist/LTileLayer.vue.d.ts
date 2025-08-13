@@ -1,5 +1,5 @@
 import L from 'leaflet';
-declare const _default: import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     readonly tms: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
@@ -54,9 +54,9 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: import("vue").PropType<string | number | (() => string | number)>;
         readonly custom: true;
     };
-}, {
-    mapRef: import("vue").Ref<unknown>;
-}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, {
+    mapRef: import("vue").Ref<unknown, unknown>;
+}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     readonly tms: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
@@ -111,10 +111,10 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: import("vue").PropType<string | number | (() => string | number)>;
         readonly custom: true;
     };
-}>>, {
+}>> & Readonly<{}>, {
     readonly options: Record<string, any>;
     readonly tms: boolean;
     readonly detectRetina: boolean;
     readonly noWrap: boolean;
-}, {}>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default _default;

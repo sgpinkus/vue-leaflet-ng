@@ -1,5 +1,5 @@
 import L from 'leaflet';
-declare const _default: import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     readonly center: {
         readonly type: import("vue").PropType<L.LatLngExpression>;
     };
@@ -69,7 +69,7 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: BooleanConstructor;
         readonly default: undefined;
     };
-}, void, Record<any, any>, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, void, Record<any, any>, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     readonly center: {
         readonly type: import("vue").PropType<L.LatLngExpression>;
     };
@@ -139,12 +139,12 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: BooleanConstructor;
         readonly default: undefined;
     };
-}>>, {
+}>> & Readonly<{}>, {
     readonly worldCopyJump: boolean;
     readonly inertia: boolean;
     readonly zoomAnimation: boolean;
     readonly fadeAnimation: boolean;
     readonly markerZoomAnimation: boolean;
     readonly noBlockingAnimations: boolean;
-}, {}>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default _default;

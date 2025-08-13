@@ -1,5 +1,5 @@
 import L from 'leaflet';
-declare const _default: import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     readonly radius: {
         readonly type: import("vue").PropType<number>;
     };
@@ -22,13 +22,13 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: NumberConstructor;
     };
     readonly lineCap: {
-        readonly type: import("vue").PropType<L.LineCapShape | undefined>;
+        readonly type: import("vue").PropType<L.PathOptions["lineCap"]>;
     };
     readonly lineJoin: {
-        readonly type: import("vue").PropType<L.LineJoinShape | undefined>;
+        readonly type: import("vue").PropType<L.PathOptions["lineJoin"]>;
     };
     readonly dashArray: {
-        readonly type: import("vue").PropType<string | number[] | undefined>;
+        readonly type: import("vue").PropType<L.PathOptions["dashArray"]>;
     };
     readonly dashOffset: {
         readonly type: StringConstructor;
@@ -44,7 +44,7 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: NumberConstructor;
     };
     readonly fillRule: {
-        readonly type: import("vue").PropType<L.FillRule | undefined>;
+        readonly type: import("vue").PropType<L.PathOptions["fillRule"]>;
     };
     readonly className: {
         readonly type: StringConstructor;
@@ -72,9 +72,9 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: import("vue").PropType<string | number | (() => string | number)>;
         readonly custom: true;
     };
-}, {
-    mapRef: import("vue").Ref<unknown>;
-}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, {
+    mapRef: import("vue").Ref<unknown, unknown>;
+}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     readonly radius: {
         readonly type: import("vue").PropType<number>;
     };
@@ -97,13 +97,13 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: NumberConstructor;
     };
     readonly lineCap: {
-        readonly type: import("vue").PropType<L.LineCapShape | undefined>;
+        readonly type: import("vue").PropType<L.PathOptions["lineCap"]>;
     };
     readonly lineJoin: {
-        readonly type: import("vue").PropType<L.LineJoinShape | undefined>;
+        readonly type: import("vue").PropType<L.PathOptions["lineJoin"]>;
     };
     readonly dashArray: {
-        readonly type: import("vue").PropType<string | number[] | undefined>;
+        readonly type: import("vue").PropType<L.PathOptions["dashArray"]>;
     };
     readonly dashOffset: {
         readonly type: StringConstructor;
@@ -119,7 +119,7 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: NumberConstructor;
     };
     readonly fillRule: {
-        readonly type: import("vue").PropType<L.FillRule | undefined>;
+        readonly type: import("vue").PropType<L.PathOptions["fillRule"]>;
     };
     readonly className: {
         readonly type: StringConstructor;
@@ -147,11 +147,11 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: import("vue").PropType<string | number | (() => string | number)>;
         readonly custom: true;
     };
-}>>, {
+}>> & Readonly<{}>, {
     readonly stroke: boolean;
     readonly fill: boolean;
     readonly interactive: boolean;
     readonly bubblingMouseEvents: boolean;
     readonly options: Record<string, any>;
-}, {}>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default _default;

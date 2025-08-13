@@ -1,11 +1,11 @@
 import L from 'leaflet';
-declare const _default: import("vue").DefineComponent<{
+declare const _default: import("vue").DefineComponent<import("vue").ExtractPropTypes<{
     readonly draggable: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
     };
     readonly icon: {
-        readonly type: import("vue").PropType<L.Icon<L.IconOptions> | L.Icon<L.BaseIconOptions>>;
+        readonly type: import("vue").PropType<L.Icon | L.Icon<L.BaseIconOptions>>;
     };
     readonly zIndexOffset: {
         readonly type: NumberConstructor;
@@ -30,15 +30,15 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: import("vue").PropType<string | number | (() => string | number)>;
         readonly custom: true;
     };
-}, {
-    mapRef: import("vue").Ref<unknown>;
-}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}>, {
+    mapRef: import("vue").Ref<unknown, unknown>;
+}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
     readonly draggable: {
         readonly type: BooleanConstructor;
         readonly default: undefined;
     };
     readonly icon: {
-        readonly type: import("vue").PropType<L.Icon<L.IconOptions> | L.Icon<L.BaseIconOptions>>;
+        readonly type: import("vue").PropType<L.Icon | L.Icon<L.BaseIconOptions>>;
     };
     readonly zIndexOffset: {
         readonly type: NumberConstructor;
@@ -63,8 +63,8 @@ declare const _default: import("vue").DefineComponent<{
         readonly type: import("vue").PropType<string | number | (() => string | number)>;
         readonly custom: true;
     };
-}>>, {
+}>> & Readonly<{}>, {
     readonly options: Record<string, any>;
     readonly draggable: boolean;
-}, {}>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 export default _default;
